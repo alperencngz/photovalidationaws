@@ -1,13 +1,15 @@
 PhotoValidationProcessorI.py:
 
 When a new object is created in S3 with an image in it,
+
+
 S3 sends signal to Lambda,
 Lambda takes the image and sends it to Rekognition to do evaluations,
 According to our parameters Lambda determines if it is a pass or fail (for a passaport picutre),
 Lambda stores the information in DynamoDB,
 Sends and SNS signal to inform subscribers about the new image and its conditions.
 
-Lambda_API.py:
+ImageRequestHandler.py:
 
 Creates an API for our DynamoDB database,
 If called returns the information about certain image.
