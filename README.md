@@ -1,4 +1,4 @@
-Lambda_API.py:
+PhotoValidationProcessorI.py:
 
 When a new object is created in S3 with an image in it,
 S3 sends signal to Lambda,
@@ -7,7 +7,7 @@ According to our parameters Lambda determines if it is a pass or fail (for a pas
 Lambda stores the information in DynamoDB,
 Sends and SNS signal to inform subscribers about the new image and its conditions.
 
-DynamoDB.py:
+Lambda_API.py:
 
 Creates an API for our DynamoDB database,
 If called returns the information about certain image.
